@@ -27,6 +27,16 @@ rig-status
 # Ideas appear as GitHub issues → AI processes → you approve → PR appears
 ```
 
+## Testing
+
+Run the end-to-end pipeline smoke test to verify all stages are wired up correctly:
+
+```bash
+bash scripts/test-pipeline.sh
+```
+
+This checks: `gh` CLI auth, repo access (rig + rig-inbox), local state directories, issue creation, and label state-machine transitions. It creates and immediately closes a test issue on rig-inbox.
+
 ## Cron Jobs
 
 | Job | Schedule | Purpose |
